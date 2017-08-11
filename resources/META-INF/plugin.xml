@@ -1,0 +1,42 @@
+<idea-plugin>
+  <id>com.applariat.idea.plugin.id</id>
+  <name>appLariat Plugin</name>
+  <version>1.0</version>
+  <vendor email="support@applariat.com" url="http://www.applariat.com">appLariat</vendor>
+
+  <description><![CDATA[
+      appLariat plugin enables automated connectio the the appLariat platform API.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products -->
+  <depends>com.intellij.modules.lang</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <group id="AppLariatMainMenu" text="AppLariat" description="AppLariat menu items" popup="true">
+    <!-- Add your actions here -->
+      <add-to-group group-id="MainMenu"  anchor="last"/>
+        <action id="DeployApp" class="DeployApp" text="Deploy App" description="Deploy the latest code changes"/>
+        <action id="AppUrl" class="AppUrl" text="AppUrl" description="Get the your application URL"/>
+        <action id="Configure" class="Configure" text="Configure" description="Configure "/>
+        <action id="Logout" class="Logout" text="Logout" description="Logout"/>
+    </group>
+
+  </actions>
+
+</idea-plugin>
