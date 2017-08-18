@@ -110,7 +110,7 @@ public class ProgressBar implements IRunnableWithProgress {
       						JSONObject jo2 = (JSONObject)jo1.get("data");
       						String state = (String)((JSONObject)jo2.get("status")).get("state");
 
-      						if (state.equalsIgnoreCase("running")) {
+      						if (state.equalsIgnoreCase("running") || state.equalsIgnoreCase("deployed")) {
       							finished=true;
       						} else if (state.equalsIgnoreCase("failed")) {
       							setError(true);

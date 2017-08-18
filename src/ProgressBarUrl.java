@@ -128,7 +128,7 @@ public class ProgressBarUrl implements IRunnableWithProgress {
                   	setErrorMessage("Deployment "+rdd.getDeployData().getName()+" is currently stopped. Try reconfiguring.");
                   	monitor.done(); 
                   	return;
-          		} else if (!state.equalsIgnoreCase("running")) {
+          		} else if (!(state.equalsIgnoreCase("running") || state.equalsIgnoreCase("deployed"))) {
           			setError(true);
               		setErrorMessage("Deployment "+rdd.getDeployData().getName()+" is not running.");
               		monitor.done(); 
